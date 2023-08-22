@@ -1,0 +1,14 @@
+
+// text heading color
+.text-body-heading {
+  color: $headings-color;
+  &:hover {
+    color: inherit !important;
+  }
+}
+// text body hover color if have link
+.text-body {
+  &[href]:hover {
+    color: $link-hover-color !important;
+  }
+}

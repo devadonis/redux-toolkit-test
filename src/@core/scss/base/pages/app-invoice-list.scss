@@ -1,0 +1,15 @@
+
+@import '../bootstrap-extended/include'; // Bootstrap includes
+@import '../components/include'; // Components includes
+
+.invoice-list-wrapper {
+  @media (max-width: 470px) {
+    .invoice_status {
+      margin-top: 1rem;
+      width: 100%;
+      select {
+        margin-left: 0 !important;
+      }
+    }
+  }
+}

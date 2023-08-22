@@ -1,0 +1,13 @@
+
+// to remove outline on focus
+.audio-player {
+  &:focus {
+    outline: 0;
+  }
+}
+.plyr__controls {
+  justify-content: flex-start;
+}
+.plyr__progress {
+  flex-grow: 1;
+}

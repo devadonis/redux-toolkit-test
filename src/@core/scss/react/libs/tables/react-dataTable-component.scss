@@ -1,0 +1,153 @@
+@import '../../../base/bootstrap-extended/include';
+@import '../../../base/components/include';
+
+.react-dataTable {
+  border-radius: 0;
+  .rdt_TableHead {
+    .rdt_TableHeadRow {
+      background-color: #E8E8EBFF;
+      border-top: 1px solid;
+      border-color:#E8E8EBFF;
+      min-height: 0;
+      height: 38px;
+
+      .rdt_TableCol {
+        padding: 0.72rem 1.5rem;
+        .rdt_TableCol_Sortable {
+          color: #212529FF;
+          font-weight: bold;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+          &:hover {
+            opacity: 1;
+          }
+          span {
+            margin-left: 0.35rem;
+          }
+        }
+        &:first-child {
+          .form-check {
+            transform: translateX(-10px);
+          }
+        }
+      }
+    }
+  }
+
+  .rdt_TableBody {
+    .rdt_TableRow {
+      color: #212529FF;
+      .rdt_TableCell {
+        height: 53px;
+        padding: 0.72rem 1.5rem;
+
+        .column-action {
+          svg {
+            stroke: #212529FF;
+          }
+
+          .dropdown-item:hover {
+            svg {
+              stroke: #0D6EFDFF;
+            }
+          }
+
+          .dropdown-item:active {
+            svg {
+              stroke: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .react-paginate {
+    &.separated-pagination {
+      .page-item:first-child .page-link,
+      .page-item:last-child .page-link {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &.roles-table {
+    .rdt_TableHead .rdt_TableHeadRow .rdt_TableCol:first-child .form-check {
+      transform: translateX(0);
+    }
+    .rdt_TableBody .rdt_TableRow .rdt_TableCell:first-child .form-check {
+      transform: translateX(10px);
+    }
+  }
+
+  &.react-dataTable-selectable-rows {
+    .rdt_TableHead {
+      .rdt_TableHeadRow {
+        .rdt_TableCol:not(:first-child) {
+          padding-left: 0.2rem;
+        }
+      }
+    }
+  }
+}
+
+.permission-header {
+  @media (max-width: 740px) {
+    .add-permission {
+      margin-top: 1rem !important;
+    }
+  }
+}
+
+.rdt_Pagination {
+  select {
+    min-width: 30px;
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+  }
+}
+
+.dataTable-filter {
+  max-width: 220px;
+}
+
+.dataTable-select {
+  width: 5rem;
+  &:not([multiple='multiple']) {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    background-position: calc(100% - 12px) 10px, calc(100% - 20px) 12px, 100% 0;
+    background-size: 10px 10px, 10px 10px;
+  }
+}
+
+.dark-layout {
+  .app-user-list {
+    header {
+      background-color:#484848FF;
+    }
+  }
+
+  .react-dataTable {
+    .hlidmt {
+      background-color: #484848FF;
+    }
+
+    .khKjDK {
+      background-color: #484848FF;
+      color: #B4B7BDFF;
+    }
+
+    .rdt_Table {
+      background: #343D55FF;
+      color: #B4B7BDFF;
+
+      & > div:first-child:not(.rdt_TableHead):not(.rdt_TableBody) {
+        color: #B4B7BDFF;
+        background-color: #484848FF;
+      }
+    }
+  }
+}
